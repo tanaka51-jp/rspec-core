@@ -746,7 +746,7 @@ EOM
 
       # @private
       def example_ordering_block
-        @example_ordering_block ||= lambda { |examples| examples }
+        @example_ordering_block ||= DEFAULT_ORDERING
       end
 
       # Sets a strategy by which to order groups.
@@ -769,7 +769,7 @@ EOM
 
       # @private
       def group_ordering_block
-        @group_ordering_block ||= lambda { |groups| groups }
+        @group_ordering_block ||= DEFAULT_ORDERING
       end
 
       # Sets a strategy by which to order groups and examples.
