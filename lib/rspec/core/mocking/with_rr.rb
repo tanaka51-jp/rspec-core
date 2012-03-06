@@ -5,10 +5,11 @@ RSpec.configuration.backtrace_clean_patterns.push(RR::Errors::BACKTRACE_IDENTIFI
 module RSpec
   module Core
     module MockFrameworkAdapter
-      
+
       def self.framework_name; :rr end
 
       include RR::Extensions::InstanceMethods
+      include RR::Adapters::RSpec2
 
       def setup_mocks_for_rspec
         RR::Space.instance.reset
